@@ -1,3 +1,5 @@
+'use strict';
+
 import * as foundryup from "@foundry-rs/easy-foundryup";
 import * as fs from "fs";
 import dedent from "dedent";

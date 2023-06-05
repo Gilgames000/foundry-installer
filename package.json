@@ -1,7 +1,7 @@
 {
     "name": "foundry-installer",
     "description": "A Node.js installer for the Foundry suite of tools.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "Gilgameš",
     "license": "MIT",
     "keywords": [
@@ -11,30 +11,24 @@
         "foundry-rs",
         "foundryup",
         "forge",
-        "anvil"
+        "anvil",
+        "cast"
     ],
     "repository": "https://github.com/Gilgames000/foundry-installer",
-    "main": "dist/install.js",
-    "types": "dist/index.d.ts",
+    "main": "./src/install.js",
     "bin": {
         "forge": "./bin/forge",
         "anvil": "./bin/anvil",
         "cast": "./bin/cast"
     },
     "scripts": {
-        "install-foundry": "ts-node ./src/install.ts",
-        "build": "tsc",
-        "postinstall": "pnpm install-foundry",
-        "prepublish": "pnpm build",
+        "preinstall": "node ./src/install.js",
         "prepublishOnly": "rm -rf ./bin || echo ''"
     },
     "devDependencies": {
         "@foundry-rs/easy-foundryup": "^0.1.3",
-        "@types/dedent": "^0.7.0",
-        "@types/node": "^20.2.5",
-        "dedent": "^0.7.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.1.3"
+        "dedent": "^0.7.0"
     },
+    "type": "module",
     "packageManager": "pnpm@8.6.0"
 }
