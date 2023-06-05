@@ -1,7 +1,7 @@
 {
     "name": "foundry-installer",
     "description": "A Node.js installer for the Foundry suite of tools.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Gilgameš",
     "license": "MIT",
     "keywords": [
@@ -24,7 +24,7 @@
     "scripts": {
         "install-foundry": "ts-node ./src/install.ts",
         "build": "tsc",
-        "preinstall": "pnpm install-foundry",
+        "postinstall": "pnpm install-foundry",
         "prepublish": "pnpm build",
         "prepublishOnly": "rm -rf ./bin || echo ''"
     },
