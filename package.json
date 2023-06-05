@@ -1,7 +1,7 @@
 {
     "name": "foundry-installer",
     "description": "A Node.js installer for the Foundry suite of tools.",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "author": "Gilgameš",
     "license": "MIT",
     "keywords": [
@@ -23,7 +23,7 @@
     },
     "scripts": {
         "preinstall": "node ./src/install.js",
-        "prepublishOnly": "rm -rf ./bin || echo ''"
+        "prepublishOnly": "node ./src/generate-binaries.js"
     },
     "dependencies": {
         "@foundry-rs/easy-foundryup": "^0.1.3",
